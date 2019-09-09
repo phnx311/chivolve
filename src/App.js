@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { auth } from './firebase/firebase.utils.js';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils.js';
 
 import './App.css';
 
@@ -26,7 +26,9 @@ class App extends React.Component {
         currentUser: user
       })
       console.log(user, 'user object')
+      createUserProfileDocument(user);
     })
+
   }
 
   componentWillUnmount() {
