@@ -15,9 +15,6 @@ const config = {
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
 
-  if (!userAuth) {
-    return
-  } else {
     const userRef = firestore.collection('/users').doc(`${userAuth.uid}`);
     const snapShot = await userRef.get();
     if (!snapShot.exists) {
@@ -36,7 +33,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
       }
     }
     return userRef;
-  }
 }
 
 
