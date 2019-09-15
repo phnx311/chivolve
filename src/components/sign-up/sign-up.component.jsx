@@ -11,8 +11,6 @@ class SignUp extends React.Component {
   constructor() {
     super();
 
-    //what do we need to store?
-    //email, password
     this.state = {
       displayName:'',
       email: '',
@@ -35,7 +33,6 @@ class SignUp extends React.Component {
 
       try {
         const {user} = await auth.createUserWithEmailAndPassword(email, password);
-
         await createUserProfileDocument(user, {displayName});
 
         this.setState({
@@ -66,11 +63,11 @@ class SignUp extends React.Component {
           Sign up with your email
         </span>
         <form onSubmit={this.handleSubmit}>
-          <FormInput name='display' handleChange={this.handleChange} value={this.state.displayName} label='Display Name' required/>
+          <FormInput name='displayName' handleChange={this.handleChange} value={this.state.displayName} label='Display Name' required/>
           <FormInput name='email' handleChange={this.handleChange} value={this.state.email} label='Email' required/>
           <FormInput name='password' handleChange={this.handleChange} value={this.state.password} label='Password' required/>
           <FormInput name='confirm' handleChange={this.handleChange} value={this.state.confirm} label='Confirm' required/>
-          <CustomButton type='submit'>Sign In</CustomButton>
+          <CustomButton type='submit'>Sign Up</CustomButton>
         </form>
       </div>
     )
