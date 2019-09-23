@@ -4,3 +4,5 @@ const setCurrentUser = user => {
     payload: user
   }
 }
+
+export default setCurrentUser;
