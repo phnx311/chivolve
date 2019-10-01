@@ -1,9 +1,8 @@
-import { CartTypeActions }  from './cart.type.js/index.js'
+import { CartTypeActions }  from './cart.type.js'
 
-const toggleCartDropdown = (status) => {
+const toggleCartDropdown = () => {
   return {
     type: CartTypeActions.TOGGLE_CART_DROPDOWN,
-    payload: status
   }
 }
 
