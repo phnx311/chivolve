@@ -4,6 +4,7 @@
   flex-direction: column;
   height: 350px;
   align-items: center;
+  position: relative;
 
   .image {
     width:100%;
@@ -29,6 +30,22 @@
     .title {
       width: 10%;
       margin-bottom: 15px;
+    }
+  }
+
+  .collection-item-button {
+    position: absolute;
+    top: 73%;
+    display: none;
+  }
+
+  &:hover {
+    .collection-item-button {
+      display: flex;
+      opacity: .7;
+    }
+    .image {
+      opacity: .5;
     }
   }
 }
