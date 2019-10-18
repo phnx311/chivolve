@@ -6,7 +6,7 @@ export const toggleCartDropdown = () => {
   }
 }
 
-export const addToCart = (item) => {
+export const addItemToCart = (item) => {
   return {
     type: CartTypeActions.ADD_TO_CART,
     payload: item
