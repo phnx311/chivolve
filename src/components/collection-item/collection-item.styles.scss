@@ -5,6 +5,7 @@
   height: 350px;
   align-items: center;
   position: relative;
+  overflow: hidden;
 
   .image {
     width:100%;
@@ -27,16 +28,16 @@
       margin-bottom: 15px;
     }
 
-    .title {
+    .price {
       width: 10%;
       margin-bottom: 15px;
     }
   }
 
   .collection-item-button {
-    position: absolute;
     top: 73%;
     display: none;
+    position: absolute;
   }
 
   &:hover {
