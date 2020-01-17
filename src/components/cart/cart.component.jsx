@@ -8,7 +8,7 @@ import CartItem from '../cart-item/cart-item.component';
 import CustomButton from '../custom-button/custom-button.component';
 
 const Cart = ({ cart }) => {
-  console.log(cart, 'what are we iterating over???' )
+
   return (
     <div className='cart'>
       <div className='cart-items'>
