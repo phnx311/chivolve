@@ -12,9 +12,15 @@ const Cart = ({ cart }) => {
   return (
     <div className='cart'>
       <div className='cart-items'>
-        {cart.map((cartItem, idx) => (<CartItem item={cartItem} key={idx}/>))}
+        { cart.length ?
+        cart.map((cartItem, idx) => (<CartItem item={cartItem} key={idx}/>))
+        :
+        <span className="empty-cart-message">
+          Add Items To Cart
+        </span>
+        }
       </div>
-      <CustomButton>Go To Checkout</CustomButton>
+      <CustomButton isDisabled={cart.length ? undefined : 'disabled'}>Go To Checkout</CustomButton>
     </div>
   )
 }
