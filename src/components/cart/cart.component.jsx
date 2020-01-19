@@ -16,11 +16,11 @@ const Cart = ({ cart }) => {
         cart.map((cartItem, idx) => (<CartItem item={cartItem} key={idx}/>))
         :
         <span className="empty-cart-message">
-          Add Items To Cart
+         Your Cart Is Empty
         </span>
         }
       </div>
-      <CustomButton isDisabled={cart.length ? undefined : 'disabled'}>Go To Checkout</CustomButton>
+      <CustomButton isDisabled={cart.length ? undefined : 'disabled'} >Go To Checkout</CustomButton>
     </div>
   )
 }
