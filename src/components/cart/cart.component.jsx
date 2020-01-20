@@ -2,12 +2,14 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 
+import { withRouter } from 'react-router-dom';
+
 import './cart.styles.scss';
 
 import CartItem from '../cart-item/cart-item.component';
 import CustomButton from '../custom-button/custom-button.component';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, history }) => {
 
   return (
     <div className='cart'>
@@ -20,7 +22,7 @@ const Cart = ({ cart }) => {
         </span>
         }
       </div>
-      <CustomButton isDisabled={cart.length ? undefined : 'disabled'} >Go To Checkout</CustomButton>
+      <CustomButton isDisabled={cart.length ? undefined : 'disabled'} onClick={() => history.push('/checkout')}>Go To Checkout</CustomButton>
     </div>
   )
 }
@@ -29,4 +31,4 @@ const mapStateToProps = (state) => ({
   cart: state.cart.cartItems
 })
 
-export default connect(mapStateToProps, null)(Cart);
+export default withRouter(connect(mapStateToProps, null)(Cart));
