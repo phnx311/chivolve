@@ -1,0 +1,37 @@
+.checkout {
+  margin: 50px auto 0;
+  width: 60vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .checkout-header {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid darkgray;
+
+    .checkout-header-title{
+      width: 23%;
+      text-transform: capitalize;
+
+      &:last-child {
+        width: 8%;
+      }
+    }
+  }
+
+  .checkout-items {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+
+  .total {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 36px;
+  }
+}
