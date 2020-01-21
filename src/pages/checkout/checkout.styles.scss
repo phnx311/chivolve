@@ -13,7 +13,7 @@
     justify-content: space-between;
     border-bottom: 1px solid darkgray;
 
-    .checkout-header-title{
+    .checkout-block{
       width: 23%;
       text-transform: capitalize;
 
@@ -27,6 +27,7 @@
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
   }
 
   .total {
