@@ -1,15 +1,29 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import './cart-item.styles.scss';
 
-const CartItem = ({ item: {imageUrl, name, id, quantity}}) => (
+import { removeItemFromCart } from '../../redux/cart/cart.action'
+
+const CartItem = ({ item, removeItem}) => (
   <div className='cart-item'>
-    <div className='cart-image' style={{backgroundImage: `url(${imageUrl})`}}></div>
+    <div className='cart-image-container'>
+      <img src={item.imageUrl} alt="cart image"/>
+    </div>
     <div className='cart-item-info'>
-      <div className='cart-item-name'>{name}</div>
-      <div className='cart-item-count'>x {quantity}</div>
+      <div className='cart-item-name'>{item.name}</div>
+      <div className='cart-item-count' >x {item.quantity}</div>
+    </div>
+    <div className='cart-item-remove' onClick={() => {removeItem(item)}}>
+      <div>
+        <small>remove</small>
+      </div>
     </div>
   </div>
 )
 
-export default CartItem;
+const mapDispatchToProps = (dispatch) => ({
+  removeItem: (item) => dispatch(removeItemFromCart(item))
+})
+
+export default connect(null, mapDispatchToProps)(CartItem);
