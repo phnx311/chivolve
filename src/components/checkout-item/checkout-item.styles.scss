@@ -1,11 +1,12 @@
 .checkout-item {
   width: 100%;
-  height: 100px;
+  height: 90px;
   display: flex;
   margin: 15px 0;
 
   .checkout-block {
     width: 23%;
+    padding-top: 35px;
 
     .image-container {
       width: 75px;
@@ -16,9 +17,13 @@
         width: 100%;
       }
     }
+    &:first-child {
+      padding: 0
+    }
 
     &:last-child {
       width: 8%;
+      padding-left: 20px;
     }
   }
 }
