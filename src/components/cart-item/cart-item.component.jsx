@@ -8,7 +8,7 @@ import { removeItemFromCart } from '../../redux/cart/cart.action'
 const CartItem = ({ item, removeItem}) => (
   <div className='cart-item'>
     <div className='cart-image-container'>
-      <img src={item.imageUrl} alt="cart image"/>
+      <img src={item.imageUrl} alt="itemimage"/>
     </div>
     <div className='cart-item-info'>
       <div className='cart-item-name'>{item.name}</div>
