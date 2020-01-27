@@ -2,7 +2,7 @@
 
 ## An E-Commerce application using React and Redux
 
-![](chivolve.gif)
+![](github-images/chivolve.gif)
 
 ## Technologies
 
