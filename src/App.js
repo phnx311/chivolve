@@ -46,7 +46,7 @@ class App extends React.Component {
         <Header unsubscribeFromAuth={this.unsubscribeFromAuth}/>
         <Switch>
           <Route exact path='/' component={Homepage} />
-          <Route exact path='/shop' component={ShopPage} />
+          <Route path='/shop' component={ShopPage} />
           <Route exact path='/signin' render={() => this.props.currentUser ? < Redirect to='/' /> : < SignInSignUpPage/> } />
           <Route exact path='/checkout' component={Checkout} />
         </Switch>
